@@ -2,8 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
-import DOMPurify from 'dompurify';
-import { JSDOM } from 'jsdom';
+import sanitizeHtml from 'sanitize-html';
 import { authenticateToken, AuthRequest } from '../middleware/auth';
 
 const router = Router();
@@ -76,11 +75,14 @@ router.post(
 
       // Sanitize SVG files
       if (req.file.mimetype === 'image/svg+xml') {
-        const window = new JSDOM('').window;
-        const purify = DOMPurify(window as unknown as Window);
         const filePath = path.join(uploadsDir, req.file.filename);
         const svgContent = fs.readFileSync(filePath, 'utf8');
-        const cleanSvg = purify.sanitize(svgContent, { USE_PROFILES: { svg: true, svgFilters: true } });
+        const cleanSvg = sanitizeHtml(svgContent, {
+          allowedTags: [ 'svg', 'path', 'circle', 'rect', 'line', 'polyline', 'polygon', 'defs', 'linearGradient', 'stop', 'g', 'title', 'desc' ],
+          allowedAttributes: {
+            '*': ['viewBox', 'width', 'height', 'fill', 'stroke', 'stroke-width', 'stroke-linecap', 'stroke-linejoin', 'd', 'cx', 'cy', 'r', 'x', 'y', 'x1', 'y1', 'x2', 'y2', 'points', 'id', 'class', 'style', 'xmlns', 'transform', 'opacity']
+          }
+        });
         fs.writeFileSync(filePath, cleanSvg);
       }
 
