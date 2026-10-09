@@ -1,0 +1,92 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String     @id @default(uuid())
+  name         String
+  email        String     @unique
+  phoneNumber  String     @unique
+  country      String?
+  region       String?
+  city         String?
+  role         String     @default("PARTICIPANT") // Admin or Participant
+  passwordHash String?
+  createdAt    DateTime   @default(now())
+
+  quizSessions  QuizSession[]
+  feedbacks     Feedback[]
+  lotteryWins   LotteryWinner[]
+}
+
+model Question {
+  id            Int      @id @default(autoincrement())
+  questionText  String
+  options       String   // JSON string of array
+  correctAnswer String
+  isActive      Boolean  @default(true)
+}
+
+model QuizSession {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  score     Int      @default(0)
+  total     Int      @default(0)
+  createdAt DateTime @default(now())
+
+  answers   Answer[]
+}
+
+model Answer {
+  id            String      @id @default(uuid())
+  sessionId     String
+  session       QuizSession @relation(fields: [sessionId], references: [id])
+  questionId    Int
+  userAnswer    String
+  isCorrect     Boolean
+}
+
+model Reward {
+  id       Int      @id @default(autoincrement())
+  name     String
+  imageUrl String
+  type     String   // MINI or GRAND
+}
+
+model LotteryWinner {
+  id         Int      @id @default(autoincrement())
+  drawId     Int
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  rewardType String   // MINI or GRAND
+  drawTime   DateTime @default(now())
+}
+
+model Feedback {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  stars     Int
+  comment   String?
+  createdAt DateTime @default(now())
+}
+
+model SystemSetting {
+  key   String @id
+  value String
+}
+
+model SiteConfig {
+  id        Int      @id @default(1)
+  config    String   // JSON blob of all frontend configuration
+  updatedAt DateTime @updatedAt
+}
