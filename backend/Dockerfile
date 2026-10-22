@@ -8,8 +8,13 @@ RUN apk add --no-cache openssl
 
 COPY package.json pnpm-lock.yaml ./
 
-# Use npm install for reliable Docker builds
-RUN npm install --legacy-peer-deps
+# Configure npm for resilient downloads over slow/unstable network connections
+RUN npm config set fetch-retries 5 \
+    && npm config set fetch-retry-factor 2 \
+    && npm config set fetch-retry-mintimeout 20000 \
+    && npm config set fetch-retry-maxtimeout 120000 \
+    && npm config set fetch-timeout 300000 \
+    && npm install --legacy-peer-deps
 
 # Copy prisma schema and generate client
 COPY prisma ./prisma
