@@ -1,17 +1,45 @@
 import axios from 'axios';
 
+// Dynamically resolve API URL so it works seamlessly on:
+// 1. Unified port 80 / domain / reverse proxy (uses relative '/api')
+// 2. Direct server IP on port 3000 (uses 'http://<SERVER_IP>:5000/api')
+// 3. Localhost development (uses 'http://localhost:5000/api')
+export const getBaseUrl = (): string => {
+  if (typeof window !== 'undefined') {
+    const { hostname, port, protocol } = window.location;
+    // When accessed through standard HTTP/HTTPS ports (e.g. via Nginx reverse proxy on port 80 or 443)
+    if (!port || port === '80' || port === '443') {
+      return '/api';
+    }
+    // When accessed directly on Next.js port (e.g. 3000), talk to the backend on the SAME server/host on port 5000
+    if (port === '3000') {
+      return `${protocol}//${hostname}:5000/api`;
+    }
+    // Fallback for any other custom port behind a proxy
+    return '/api';
+  }
+
+  // Server-side default
+  const envUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (envUrl && !envUrl.includes('localhost:5000')) {
+    return envUrl;
+  }
+  return 'http://localhost:5000/api';
+};
+
 // Create a centralized Axios instance
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api',
+  baseURL: getBaseUrl(),
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Add a request interceptor to attach the token
+// Add a request interceptor to attach the token and ensure dynamic baseURL
 api.interceptors.request.use(
   (config) => {
     if (typeof window !== 'undefined') {
+      config.baseURL = getBaseUrl();
       const token = localStorage.getItem('auth_token');
       if (token) {
         config.headers.Authorization = token;

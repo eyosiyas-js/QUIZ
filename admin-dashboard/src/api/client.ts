@@ -1,16 +1,31 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const getApiBaseUrl = (): string => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  if (typeof window !== 'undefined') {
+    const { hostname, port, protocol } = window.location;
+    // If running directly on Vite dev server (5173), point to backend on the same host:5000
+    if (port === '5173') {
+      return `${protocol}//${hostname}:5000/api`;
+    }
+    // Running in Docker on port 8080 or behind reverse proxy: use relative /api
+    return '/api';
+  }
+  return '/api';
+};
 
 const client = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: getApiBaseUrl(),
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Attach JWT token to every request
+// Attach JWT token to every request and ensure dynamic baseURL
 client.interceptors.request.use((config) => {
+  config.baseURL = getApiBaseUrl();
   const token = localStorage.getItem('admin_token');
   if (token) {
     config.headers.Authorization = token;
@@ -24,7 +39,8 @@ client.interceptors.response.use(
   (error) => {
     if (error.response?.status === 401 || error.response?.status === 403) {
       localStorage.removeItem('admin_token');
-      window.location.href = '/login';
+      const adminLogin = window.location.pathname.startsWith('/admin') ? '/admin/login' : '/login';
+      window.location.href = adminLogin;
     }
     return Promise.reject(error);
   }

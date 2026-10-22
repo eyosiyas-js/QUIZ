@@ -380,6 +380,17 @@ router.get('/lottery-winners', async (req, res) => {
   }
 });
 
+router.delete('/lottery-winners/:id', async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    await prisma.lotteryWinner.delete({ where: { id } });
+    res.json({ message: 'Lottery winner record deleted successfully' });
+  } catch (error) {
+    console.error('Failed to delete lottery winner:', error);
+    res.status(500).json({ error: 'Failed to delete lottery winner record' });
+  }
+});
+
 // ============================================================
 // FEEDBACK
 // ============================================================

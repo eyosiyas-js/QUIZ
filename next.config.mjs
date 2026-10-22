@@ -9,16 +9,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // output: 'standalone', // recommended for Docker
-  //    async rewrites() {
-  //   return [
-  //     {
-  //       source: process.env.NEXT_PUBLIC_API_URL,
-  //       // source: 'http://172.20.137.159:3002',
-  //       destination: 'https://lottery.insa.gov.et/api/',
-  //     },
-  //   ]
-  // },
+  output: 'standalone',
+  async rewrites() {
+    const backendUrl = process.env.BACKEND_INTERNAL_URL || 
+                       (process.env.NODE_ENV === 'production' ? 'http://backend:5000' : 'http://localhost:5000');
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${backendUrl}/api/:path*`,
+      },
+    ];
+  },
 }
 
 export default nextConfig

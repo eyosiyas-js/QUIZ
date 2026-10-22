@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3002",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:admin": "npm --prefix admin-dashboard run dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

@@ -12,7 +12,7 @@ export interface AuthRequest extends Request {
 
 export const authenticateToken = (req: AuthRequest, res: Response, next: NextFunction) => {
   const authHeader = req.headers['authorization'];
-  const token = authHeader; // In the frontend, the token is sent directly in the Authorization header, not "Bearer token"
+  const token = authHeader?.startsWith('Bearer ') ? authHeader.slice(7) : authHeader;
 
   if (!token) {
     return res.status(401).json({ error: 'Access denied. No token provided.' });

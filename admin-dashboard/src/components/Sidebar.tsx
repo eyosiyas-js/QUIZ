@@ -56,6 +56,17 @@ export default function Sidebar() {
       </nav>
 
       <div className="sidebar-footer">
+        <a
+          href="/statistics.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sidebar-link"
+          style={{ textDecoration: 'none' }}
+          title="Open Standalone Statistics Dashboard"
+        >
+          <span className="nav-icon">📈</span>
+          <span>Statistics Page</span>
+        </a>
         <button className="sidebar-link" onClick={logout}>
           <span className="nav-icon">🚪</span>
           <span>Logout</span>

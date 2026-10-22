@@ -1,0 +1,1390 @@
+window.STATISTICS_DATA = {
+  "meta": {
+    "title": "ETEX Quiz Game Participation & Performance Report",
+    "exportedAt": "2026-10-12T08:03:24.487675+00:00",
+    "exportedAtFormatted": "Oct 12, 2026 - 08:03 AM UTC",
+    "source": "PostgreSQL Database (Live Export)",
+    "version": "1.0"
+  },
+  "summary": {
+    "totalParticipants": 8,
+    "totalSessions": 9,
+    "completedSessions": 9,
+    "eligibleParticipants": 5,
+    "ineligibleParticipants": 3,
+    "eligibilityRate": 62.5,
+    "eligibilityThreshold": 8,
+    "averageScore": 9.9,
+    "totalQuestions": 131,
+    "totalAnswers": 90,
+    "correctAnswers": 89,
+    "incorrectAnswers": 1,
+    "overallAccuracyRate": 98.9,
+    "miniLotteryWinners": 0,
+    "grandLotteryWinners": 0
+  },
+  "scoreDistribution": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 1,
+    "10": 8
+  },
+  "eligibilityBreakdown": {
+    "eligible": 5,
+    "notEligible": 3,
+    "threshold": 8
+  },
+  "accuracyBreakdown": {
+    "correct": 89,
+    "incorrect": 1
+  },
+  "questionStats": [
+    {
+      "id": 2,
+      "question": "የኢሜይል ፊሺንግ ጥቃትን ለመከላከል የሚረዳን መከላከያ የትኛዉ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 3,
+      "question": "የኢሜይል URL ላይ ምልከታ ስናደርግ የፊሺንግ ጥቃትን ሊያመለክተን የሚችለዉ የትኛዉ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 4,
+      "question": "የኢሜይል መለያዎ እንደተጠለፈ ጥርጣሬ ቢኖርዎት ማድረግ ያለብዎ የትኛዉን ነዉ?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 5,
+      "question": "በአጋጣሚ በስህተት የኢሜይል ፊሺንግ አገናኝ(ሊንክ) ቢጫኑና ቢከፍቱ ማድረግ ያለብዎ የትኛዉን ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 6,
+      "question": "የኢሜይል ሶፍትዌርን ማዘመን ዋነኛ ጠቀሜታ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 7,
+      "question": "የተቋማትን ከፍተኛ ስራ አስፈፃሚዎች ኢላማ ሚያደርገው የፊሺንግ (phishing) ደረጃ ታዋቂ አይነት የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 8,
+      "question": "ክሎን ፊሺንግ ምንድነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 9,
+      "question": "የኢሜል ፊሺንግ ጥቃት ዋና አላማ ምንድነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 10,
+      "question": "ለኢሜል መለያዎች ባለሁለት ደረጃ ማረጋገጫ (2FA) መጠቀም ዓላማ ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 11,
+      "question": "የተጠለፈ የኢሜይል መለያ ከሚያሳያቸዉ ባህሪያት መካከል የሆነዉ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 12,
+      "question": "የኢሜይል ምስጠራ (encryption) ዋና አላማ ምንድነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 13,
+      "question": "በኢሜል ውስጥ የዲጂታል ፊርማ (Digital signature) ሚና ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 14,
+      "question": "የኢሜል ማጣሪያ (Email filtering) ተግባር የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 15,
+      "question": "ከሚከተሉት ውስጥ የተለመደው የኢሜይል ፊሺንግ (email phising) መልክት ርዕስ የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 16,
+      "question": "ኢንተርኔትን መሰረት ያደረጉ ማጭበርበሮች (online scam) የተለመደ ባህሪ ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 17,
+      "question": "የቅድሚያ ክፍያ ማጭበርበር (advance-fee scam) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 18,
+      "question": "አጭበርባሪዎች (Online scammers) ብዙውን ጊዜ የማስገር ድረ-ገጾችን ህጋዊ ለማስመሰል የሚጠቀሙበት ዘዴ የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 19,
+      "question": "በመስመር ላይ ማጭበርበሮች ውስጥ \"ካትፊሺንግ\" (Catfishing) የሚለው ቃል ምንን ያመለክታል?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 20,
+      "question": "ስሚሺንግ (smishing) ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 21,
+      "question": "አጭበርባሪዎች ብዙዉን ጊዜ የክሪፕቶ ከረንሲ (cryptocurrency) ዋሌትን አማራጭ ጥቅም ላይ የሚያዉሉት ለምን አላማ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 22,
+      "question": "ከሚከተሉት ውስጥ “ዲፕ ፌክ” (deepfake) ማጭበርበርን የሚያብራራው የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 23,
+      "question": "ከሚከተሉት ውስጥ የትኛው “quishing”ን በተሻለ ይገልፀዋል?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 24,
+      "question": "24. በኢሜይል ማጭበርበሮች አውድ ውስጥ \"pharming\" ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 25,
+      "question": "የማስገር ኪት (phishing kit) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 26,
+      "question": "በኢሜል ማስገር ውስጥ፣ “spear phishing” የሚለው ቃል ምንን ያመለክታል?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 27,
+      "question": "ከሚከተሉት ዉስጥ ፊሺንግ ኢሜይል ሊሆን የሚችለዉ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 28,
+      "question": "በአንድ ኢሜል ውስጥ ያለ አገናኝ (ሊንክ) ደህንነቱ የተጠበቀ መሆኑን ለማረጋገጥ መጠቀም ያለብን መንገድ የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 29,
+      "question": "ከመስመር ላይ ማጭበርበሮች እራስዎን ለመጠበቅ አንዱ መንገድ የሆነዉ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 30,
+      "question": "የማስገር ማጭበርበር (phishing scam) እውነተኛ ወደሚመስል ድር ጣቢያ (Website) ቢመራዎ ትክክለኛነቱን ለመለየት ምን ማረጋገጥ አለብዎ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 31,
+      "question": "አብረዉ ከሚሰሩት ኩባንያ የተላከ አጠራጣሪ ኢሜይልን ለማረጋገጥ በጣም አስተማማኝ መንገድ የትኛዉ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 32,
+      "question": "ከሚከተሉት ውስጥ ለኢሜል ምላሽ ፈጽሞ ማጋራት የሌለብዎት የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 33,
+      "question": "ከሚከተሉት ውስጥ የትኛው የንግድ ኢሜል ስምምነት (Business Email Compromise (BEC)) ማጭበርበርን በተሻለ ሁኔታ ይገልጻል?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 34,
+      "question": "ድርጅትዎን ከፊሺንግ ጥቃቶች ለመጠበቅ የተሻለ መንገድ የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 3,
+      "correctAnswers": 3,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 35,
+      "question": "በኢሜይል ፊሺንግ ውስጥ አጥቂዎች “ማህበራዊ ምህንድስናን” (Social engineering) በዋነኝነት የሚጠቀሙበት ለምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 36,
+      "question": "በመስመር ላይ ማጭበርበሮች (ኦንላይን ስካም) ውስጥ የ \"clickjacking\" ዓላማ ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 37,
+      "question": "የዜሮ ደይ የፊሺንግ ጥቃት ምንድነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 38,
+      "question": "በጋራ መገልገያዎች ላይ ከኢሜል መለያዎ መውጣት (log out) ማድረግ በዋነኝነት ለምን አስፈለገ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 39,
+      "question": "ፊሸሮች (አስጋሪዎች) የግል መረጃን ለመሰብሰብ የሚጠቀሙበት የተለመደ ዘዴ የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 40,
+      "question": "ዌብሳይቶችን ለመጎብኘት የሚጠቀሙበት ሶፍትዌር ምን ይባላል?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 41,
+      "question": "የግል መረጃዎቻችን እንዳይሰርቁ ለመከላከል በምን አይነት ዌብሳይቶች ላይ መግቢያ (login) መረጃ ማስገባት የለብንም?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 42,
+      "question": "በኢንተርኔት ላይ ትክክለኛውን የዌብሳይት አድራሻ ለማረጋገጥ የሚረዳው የደህንነት ፕሮቶኮል የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 4,
+      "correctAnswers": 4,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 43,
+      "question": "አንድ ዌብሳይት ደህንነቱ የተጠበቀ መሆኑን የሚያሳይ ምልክት የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 44,
+      "question": "በድር አሳሽ ላይ 'Incognito Mode' ወይም 'Private Browsing' የሚባለው አማራጭ ለምን ይጠቅማል?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 45,
+      "question": "ኢንክሪፕሽን (Encryption) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 46,
+      "question": "ዲክሪፕሽን (Decryption) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 47,
+      "question": "ኢንክሪፕት ለማድረግ እና ዲክሪፕት ለማድረግ የሚያገለግለው ሚስጥራዊ ቁልፍ (secret key) ምን ይባላል?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 48,
+      "question": "የኢንክሪፕሽን ዋና ዓላማ ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 49,
+      "question": "ስዩዶኒሚቲ (Pseudonymity) ምን ማለት ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 50,
+      "question": "ፋየርዎል (Firewall) ዋና ተግባር ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 51,
+      "question": "Phishing Attack ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 52,
+      "question": "የ Hash ተግባር (function) ዋነኛ ጥቅም ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 53,
+      "question": "DDoS Attack (Distributed Denial of Service Attack) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 54,
+      "question": "Malware ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 4,
+      "correctAnswers": 4,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 55,
+      "question": "'Zero-day' exploit ማለት ምን ማለት ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 56,
+      "question": "End-to-End Encryption ምንን የሚገልፅ የሳይበር ደህንነት ፅንሰ-ሃሳብ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 57,
+      "question": "Ransomware ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 58,
+      "question": "Cross-Site Scripting (XSS) Attack ምን አይነት ጥቃት ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 59,
+      "question": "59. A Man-in-the-Middle (MITM) Attack ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 3,
+      "correctAnswers": 3,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 60,
+      "question": "Biometric authentication ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 61,
+      "question": "Two-Factor Authentication (2FA) ምን ማለት ነው?",
+      "isActive": true,
+      "totalAnswers": 3,
+      "correctAnswers": 3,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 62,
+      "question": "Social Engineering Attack ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 63,
+      "question": "63. Intrusion Detection System (IDS) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 64,
+      "question": "Cyber Hygiene ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 65,
+      "question": "DNS Spoofing attack ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 66,
+      "question": "ከሚከተሉት የሳይበር ደህንነት አውድ ውስጥ ማህበራዊ ምህንድስናን ይበልጥ የሚገልጸው የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 67,
+      "question": "በስፋት የተለመደው የማህበራዊ ምህንደስና ጥቃት ዓይነት የሆነው የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 68,
+      "question": "የሳይበር አጥቂዎች የማህበራዊ ምህንድስና ስልትን እንዴት ይጠቀማሉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 69,
+      "question": "በጣም አስቸኳይ የኢሜይል መልዕክት ቢላክልዎና መልዕክቱም ተያያዥ የማስፈንጠሪያ ሊንክ/Links ላይ በቶሎ ከፍቶ መመልከትን የሚያትት ጉዳይ ቢገጥመዎ ምን ያደርጋሉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 70,
+      "question": "በዲጂታል ግንኙኝነታችን ውስጥ መረጃ ከማጋራታችን በፊት የምናዋራውን (የሚደውልልንን) አካል ትክክለኛ ማንነት ማረጋገጥ ለምን ያስፈልጋል?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 71,
+      "question": "የፊሺንግና ስፒር-ፊሺንግ (phishing and spear phishing) ጥቃቶችን እንዴት መለየት እንችላለን?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 72,
+      "question": "ትክክለኛ ያልሆነ ድረ-ገጽ እንዴት ልናውቅ እንችላለን?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 73,
+      "question": "ፕሪቴክስቲንግ (Pretexting) ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 74,
+      "question": "የቴልጌቲንግ (Tailgating) ጥቃት ስልት እንዴት ሊፈጸም ይችላል ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 75,
+      "question": "የቅርብ ጓደኛዎ ከስራ ቦታዎ የሚገኝ ኮምፒተርዎ ላይ ለአስቸኳይ ስራ ወሳኝ መረጃን ቢፈልጉና የይለፍ ቃልዎን ቢጠየቁ ደህንነቱ በተጠበቀ መንገድ ምላሽ ለመስጠት ትክክል የሆነው የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 76,
+      "question": "በማህበራዊ ሚዲያ መዳረሻዎች ብዙ መረጃዎችን ማጋራት ምን ዓይነት ጉዳቶችን ያስከትላል?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 77,
+      "question": "ሚስጥራዊ መረጃዎችን እንድናጋራ የሚጠይቁ አጠራጣሪ መለዕክቶችን ትክክለኛነት እንዴት ማረጋገጥ ይቻላል?",
+      "isActive": true,
+      "totalAnswers": 4,
+      "correctAnswers": 4,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 78,
+      "question": "ከማህበራዊ ምህንድስና (social engineering) የጥቃት ስልቶች መካከል አንዱ የሆነው ቤቲንግ (Baiting) ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 79,
+      "question": "ከማህበራዊ ምህንድስና (social engineering) ጥቃቶች ራሳችንና ተቋማትን ለመከላከል የተሻለው አማራጭ የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 80,
+      "question": "በማህበራዊ ምህንድስና (social engineering) እሳቤ ውስጥ ቪሺንግ (Vishing) ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 3,
+      "correctAnswers": 3,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 81,
+      "question": "የኋላ ማንዣበብ (Shoulder Surfing) ጥቃትን ይበልጥ የሚገልጸው የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 0,
+      "incorrectAnswers": 1,
+      "accuracyRate": 0.0,
+      "difficulty": "Challenging"
+    },
+    {
+      "id": 82,
+      "question": "ለማህበራዊ ምህንድስና (social engineering) ጥቃት አጋላጭ ምክንያት የሆነው Curiosity (መጓጓት) እንዴት ስጋት ሊሆን ይችላል?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 83,
+      "question": "ሰጥቶ መቀበል (Quid Pro Quo or Something for something) በማህበራዊ ምህንድስና ጥቃት ውስጥ እንዴት ሊገለጽ ይችላል?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 84,
+      "question": "የማህበራዊ ምህንድስና (social engineering) ጥቃት ዓይነት የሆነው ዳምፕስተር ዳይቪንግ (Dumpster Diving) ምንድን ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 85,
+      "question": "ፊሺንግ ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 86,
+      "question": "የፊሺንግ ጥቃት በብዛት የሚፈጸምበት መንገድ የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 87,
+      "question": "አጠራጣሪ ፊሺንግ ኢሜይል መለዕክቶችን እንዴት ማወቅ ይችላል?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 88,
+      "question": "የፊሺንግ (Phishing) ጥቃቶች ብዙ ጊዜ አስቸኳይ ምላሾችን ለምን ይሻሉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 89,
+      "question": "ከፊሺንግ (Phishing) ጥቃቶች ራስን ለመከላከል የሚረዱን ስልቶች የትኞቹ ናቸው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 90,
+      "question": "ብዙ ጊዜ የፊሺንግ ኢ-ሜይሎች ለምን ምንጮቻቸውን ከባንኮች ወይም ከታዋቂ ኩባንያዎች እንደተላኩ በማስመሰል ይከናዎናሉ?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 91,
+      "question": "የVPN (Virtual Private Network) ዋና ዓላማ ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 92,
+      "question": "ድረ-ገጾችን በምናስስበት ወቅት (While browsing websites) HTTPS (TLS/SSL) ምን አስተዋጽኦ አለው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 93,
+      "question": "በVPN ውስጥ የIPsec (Internet Protocol Security) ሚና ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 94,
+      "question": "የሙሉ ለሙሉ ምስጠራ (End-to-End encryption) ምንን ይገልጻል?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 95,
+      "question": "የፀረ-ቫይረስ ዋና ተግባር ምንድን ነዉ?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 96,
+      "question": "የጸረ-ቫይረስ ሶፍትዌራችሁን በየስንት ጊዜው ማዘመን (update) አለብዎት?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 97,
+      "question": "የፀረ-ቫይረስ ሶፍትዌርን ወቅታዊ ማድረግ ለምን አስፈላጊ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 98,
+      "question": "በፀረ-ቫይረስ ሶፍትዌር ውስጥ ያለው \"የእውነተኛ ጊዜ ቅኝት\" (real-time scanning) ባህሪ ምን ያደርጋል?",
+      "isActive": true,
+      "totalAnswers": 4,
+      "correctAnswers": 4,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 99,
+      "question": "የጸረ-ቫይረስ ሶፍትዌር ማልዌርን ካገኘ ምን ማድረግ አለብዎት?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 100,
+      "question": "ከሚከተሉት ዉስጥ ስለ ፀረ-ቫይረስ አጠቃቀም በትክክል የተገለፀዉ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 3,
+      "correctAnswers": 3,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 101,
+      "question": "ማህበራዊ ሚዲያ ላይ የማያዉቁት ሰዉ የጓደኝነት ጥያቄ ሲልክልወት ማድረግ ያለበዎት ጥንቃቄ የቱ ነዉ ?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 102,
+      "question": "በማህበራዊ ሚዲያ ላይ ከማይታወቅ ምንጭ የተላከን ሊንክ ከመጫንዎ በፊት ማድረግ ያለብዎት የደህንነት ልምምድ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 103,
+      "question": "የሞባይል መሳሪያዎን ኦፐሬቲንግ ሲስተም (iOS, Android) በየጊዜዉ ማዘመን ለምን አስፈላጊ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 104,
+      "question": "ሞባይልዎት ላይ አዲስ አፕሊኬሽን (app) ሲጭኑ ምን ላይ ትኩረት ማድረግ አለብዎት?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 105,
+      "question": "ሞባይልዎ ከጠፋብዎ ወይም ከተሰረቀብዎ የመጀመሪያ እርምጃዎ ምን መሆን አለበት?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 106,
+      "question": "የሞባይል መሳሪያዎን ከህዝብ Wi-Fi ጋር ማገናኘት ለምን ማስወገድ አስፈለገ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 107,
+      "question": "ኮምፒተርዎን ያልተፈቀደለት ሰው እንዳይጠቀም ለመከላከል ውጤታማው መንገድ የቱ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 108,
+      "question": "የኮምፒውተርዎን እና አፕሊኬሽኖችን በመደበኛነት ማዘመን ለምን ወሳኝ ሆነ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 109,
+      "question": "በኮምፒዉተሮቻችን ላይ የፋየርዎል ዋና ተግባር ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 110,
+      "question": "ኮምፒውተርን ከቫይረስ ለመከላከል የተሻለዉ መንገድ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 111,
+      "question": "የኮምፒዉተር ስርዓትን \"መድፈን\" (patch) ማድረግ ምን ማለት ነው?",
+      "isActive": true,
+      "totalAnswers": 3,
+      "correctAnswers": 3,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 112,
+      "question": "ጠቃሚ ዳታዎን በመደበኛነት ምትኬ (back up) ማስቀመጥ ለምን አስፈለገ?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 113,
+      "question": "የዩኤስቢ ድራይቭን (USB drive) ወደ ኮምፒውተርዎ ካስገቡ በኃላ ማድረግ ያለብዎት ጥንቃቄ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 114,
+      "question": "ተንቀሳቃሽ መሳሪያ ላይ የመረጃ ምስጠራ (encrypting) ማድረግ ዋና አላማ ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 115,
+      "question": "ተንቀሳቃሽ መሳሪያን (removable device) በኮምፒውተርዎ ላይ ከመሰካትዎ በፊት ምን ማድረግ አለብዎት?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 116,
+      "question": "የዩኤስቢ ድራይቭን (USB drive) ከኮምፒዩተርዎ በጥንቃቄ ለማውጣት የተሻለዉ መንገድ ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 117,
+      "question": "ከሚከተሉት ዉስጥ በተንቀሳቃሽ የመረጃ ቋቶች የሚገኙ መረጃዎችን ደህንነት ለማስጠበቅ የማይረዳዉ የትኛዉ መንገድ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 118,
+      "question": "ከተንቀሳቃሽ መሳሪያዎች መረጃን በመደበኛነት ምትኬ (Back up data) ማስቀመጥ ለምን አስፈላጊ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 119,
+      "question": "በተነቃይ መሳሪያዎች አማካኝነት ሊሰራጭ የሚችል የተለመደ የማልዌር አይነት ምንድነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 120,
+      "question": "በማህበራዊ ሚዲያ ላይ \"ዲጂታል አሻራ\" (digital footprint) ምን ማለት ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 121,
+      "question": "ኮምፒውተርዎ በቫይረስ ከተጠቃ ምን ማድረግ አለብዎት?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 122,
+      "question": "ከሚከተሉት ውስጥ የኮምፒውተር ሲስተሞችን፣ ኔትወርኮችን ወይም ተያያዥ መረጃዎችን ለመስረቅ፣ ለመሰለል፣ ለመጉዳት ወይም ለማጥፋት የሚደረግ ተግባርን ሚገልፀው የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 123,
+      "question": "ከሚከተሉት አማራጮች ዉስጥ ተንቀሳቃሽ መሳሪያን ለግል እና ለስራ ፋይሎች የሚጠቀሙበት ከሆነ የሚመከረው ልምምድ የቱ ነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 124,
+      "question": "የጠንካራ ይለፍ ቃል አጠቃቀም በሃሪ ያልሆነው የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 2,
+      "correctAnswers": 2,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 125,
+      "question": "አካውንቴ ተጠልፏል ብለው ከጠረጠሩ ምን ማድረግ አለቦ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 126,
+      "question": "ከሚከተሉት ውስጥ የትኛው ነው ኢንተግሪትን (information integrity) በተሻለ ሁኔታ የሚገልጸው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 127,
+      "question": "ከእነዚህ ውስጥ የትኛው የባዮሜትሪክ ማረጋገጫ ምሳሌ ነው?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 128,
+      "question": "ይፋዊ ዋይ ፋይ (public wi-fi) መጠቀም አደገኛ የሆነው ለምንድነዉ?",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 129,
+      "question": "ከሚከተሉት የትሮጃን ተግባር ያልሆነው የቱ ነው",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 130,
+      "question": "የራሱን ኮድ በሌሎች ፕሮግራሞች ላይ በመቅዳት ራሱን የሚያባዛ ጎጂ ሶፍትዌር/ ፕሮግራም ነው።",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    },
+    {
+      "id": 131,
+      "question": "ከሚከተሉት ውስጥ ለድረገፅ መተግበሪያ ስጋት ያልሆነው የትኛው ነው?",
+      "isActive": true,
+      "totalAnswers": 1,
+      "correctAnswers": 1,
+      "incorrectAnswers": 0,
+      "accuracyRate": 100.0,
+      "difficulty": "Easy"
+    },
+    {
+      "id": 132,
+      "question": "የኦንላይን ማስታወቂያዎችን የስጋት ምንጭ ሊያደርጋቸው የቻለው ምን አይነት ይዘት ቢኖራቸው ነው",
+      "isActive": true,
+      "totalAnswers": 0,
+      "correctAnswers": 0,
+      "incorrectAnswers": 0,
+      "accuracyRate": 0.0,
+      "difficulty": "Not Attempted"
+    }
+  ],
+  "dailyTrend": [
+    {
+      "date": "2026-10-12",
+      "attempts": 9,
+      "eligible": 9,
+      "uniqueParticipants": 5
+    }
+  ],
+  "regionalParticipation": [
+    {
+      "region": "Addis Ababa",
+      "count": 4
+    },
+    {
+      "region": "LA",
+      "count": 1
+    },
+    {
+      "region": "Addis ababa",
+      "count": 1
+    },
+    {
+      "region": "Ethiopia",
+      "count": 1
+    },
+    {
+      "region": "Addis Ababa ",
+      "count": 1
+    }
+  ]
+};

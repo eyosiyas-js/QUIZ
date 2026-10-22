@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import client from '../api/client';
 import Loader from '../components/Loader';
+import ConfirmDialog from '../components/ConfirmDialog';
 import '../styles/table.css';
 
 interface Winner {
@@ -17,6 +18,8 @@ export default function LotteryWinners() {
   const [loading, setLoading] = useState(true);
   const [drawing, setDrawing] = useState<string | null>(null);
   const [drawResult, setDrawResult] = useState<string | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<Winner | null>(null);
+  const [deleting, setDeleting] = useState(false);
 
   const fetchWinners = () => {
     setLoading(true);
@@ -40,6 +43,21 @@ export default function LotteryWinners() {
       setDrawResult(`❌ ${err.response?.data?.error || 'Draw failed'}`);
     } finally {
       setDrawing(null);
+    }
+  };
+
+  const handleDelete = async () => {
+    if (!deleteTarget) return;
+    setDeleting(true);
+    try {
+      await client.delete(`/admin/lottery-winners/${deleteTarget.id}`);
+      setWinners((prev) => prev.filter((w) => w.id !== deleteTarget.id));
+      setDrawResult(`🗑️ Removed ${deleteTarget.user.name} from lottery records. User is now eligible again.`);
+      setDeleteTarget(null);
+    } catch (err: any) {
+      alert(err.response?.data?.error || 'Failed to delete lottery winner record');
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -97,12 +115,13 @@ export default function LotteryWinners() {
                 <th>Phone</th>
                 <th>Type</th>
                 <th>Date</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               {winners.length === 0 ? (
                 <tr>
-                  <td colSpan={6} style={{ textAlign: 'center', padding: '40px' }}>
+                  <td colSpan={7} style={{ textAlign: 'center', padding: '40px' }}>
                     No lottery winners yet
                   </td>
                 </tr>
@@ -123,6 +142,17 @@ export default function LotteryWinners() {
                       </span>
                     </td>
                     <td>{new Date(w.drawTime).toLocaleString()}</td>
+                    <td>
+                      <div className="table-actions">
+                        <button
+                          className="btn-icon danger"
+                          title="Undo / Delete Winner Record"
+                          onClick={() => setDeleteTarget(w)}
+                        >
+                          🗑️
+                        </button>
+                      </div>
+                    </td>
                   </tr>
                 ))
               )}
@@ -130,6 +160,15 @@ export default function LotteryWinners() {
           </table>
         </div>
       )}
+
+      <ConfirmDialog
+        isOpen={!!deleteTarget}
+        title="Undo Lottery Draw"
+        message={`Are you sure you want to delete the lottery win record for ${deleteTarget?.user.name} (Draw #${deleteTarget?.drawId})? This will return the user to the eligible pool for future draws.`}
+        onConfirm={handleDelete}
+        onCancel={() => setDeleteTarget(null)}
+        isLoading={deleting}
+      />
     </div>
   );
 }

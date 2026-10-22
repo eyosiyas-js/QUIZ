@@ -2,5 +2,11 @@ node_modules/
 .next/
 dist/
 build/
+*.zip
 .env
+.env.*
+!.env.docker
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/test_db.js
 

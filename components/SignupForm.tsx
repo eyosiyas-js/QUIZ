@@ -101,12 +101,12 @@ export default function SignupForm() {
 
       try {
         const payload = {
-          name,
+          name: name.trim(),
           phone_number: phone,
-          email,
-          country,
-          region,
-          city,
+          email: email.trim(),
+          country: country || (pageConfig?.defaultCountry || "ET"),
+          region: region.trim(),
+          city: city.trim(),
         };
 
         const response = await api.post('/auth/register', payload);
@@ -117,9 +117,9 @@ export default function SignupForm() {
         localStorage.setItem("auth_token", token);
         localStorage.setItem(
           "user_info",
-          JSON.stringify({ name, email, phone })
+          JSON.stringify({ name: payload.name, email: payload.email, phone: payload.phone_number })
         );
-        setUserInfo({ name, email, phone, country, region, city });
+        setUserInfo({ name: payload.name, email: payload.email, phone: payload.phone_number, country: payload.country, region: payload.region, city: payload.city });
         setIsLoggedIn(true);
         router.push("/contest");
       } catch (error: any) {
@@ -127,9 +127,11 @@ export default function SignupForm() {
           "Error during signup:",
           error.response?.data || error.message
         );
-        alert(
-          error.response?.data?.message || "Signup failed. Please try again."
-        );
+        const serverError = error.response?.data?.message ||
+          (Array.isArray(error.response?.data?.errors)
+            ? error.response.data.errors.map((err: any) => err.message).join(", ")
+            : null);
+        alert(serverError || "Signup failed. Please try again.");
       } finally {
         setIsSubmitting(false);
       }
@@ -267,13 +269,12 @@ export default function SignupForm() {
                     try {
                       if (value) {
                         const phoneNumber = parsePhoneNumber(value);
-                        console.log("phoneNumber", phoneNumber);
-                        setCountry(phoneNumber?.country || "");
-                      } else {
-                        setCountry("");
+                        if (phoneNumber?.country) {
+                          setCountry(phoneNumber.country);
+                        }
                       }
                     } catch {
-                      setCountry("");
+                      // Keep current country fallback while typing
                     }
                   }}
                   className="bg-white/10 border-white/20 rounded-md text-white"

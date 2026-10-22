@@ -40,8 +40,9 @@ function PublicRoute() {
 }
 
 export default function App() {
+  const basename = window.location.pathname.startsWith('/admin') ? '/admin' : '/';
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AuthProvider>
         <Routes>
           <Route element={<PublicRoute />}>

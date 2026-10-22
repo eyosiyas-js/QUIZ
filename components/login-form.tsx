@@ -81,15 +81,14 @@ export default function LoginForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(phone.split("+")[1].toString(), email);
     if (validateForm() && !isSubmitting) {
       setIsSubmitting(true);
 
       try {
         const response = await api.post('/auth/login', {
           name,
-          email,
-          phone_number: `+${phone.split("+")[1].toString()}`,
+          email: email.trim(),
+          phone_number: phone,
         });
 
         if (response.status === 200 && response.data?.auth_token) {

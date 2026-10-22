@@ -1,0 +1,16 @@
+node_modules
+.next
+dist
+build
+.git
+.gitignore
+*.zip
+*.md
+backend/
+admin-dashboard/
+statistics*.html
+statistics*.js
+statistics*.json
+export_statistics.py
+.env
+.agents
