@@ -103,13 +103,30 @@ docker compose exec db psql -U postgres -d etex_game
 
 ---
 
+## Configuring SSL / HTTPS (Let's Encrypt)
+
+Run the included automated SSL script on your server:
+
+```bash
+chmod +x setup-ssl.sh
+./setup-ssl.sh yourdomain.com your-email@example.com
+```
+
+This script will automatically:
+1. Install Certbot on the server (if not already installed)
+2. Obtain a free SSL certificate from Let's Encrypt
+3. Configure Nginx with HTTPS (TLS 1.2/1.3) and automatic HTTP-to-HTTPS redirect
+4. Start Nginx with port 443 active
+5. Set up automatic certificate renewal
+
+---
+
 ## Production Checklist
 
 - [ ] Change `POSTGRES_PASSWORD` in `.env`
 - [ ] Change `JWT_SECRET` to a long random string
-- [ ] Set up HTTPS (add SSL certificates to nginx or use a reverse proxy like Caddy/Traefik)
+- [ ] Set up HTTPS using `./setup-ssl.sh yourdomain.com`
 - [ ] Set up automated database backups
-- [ ] Consider adding rate limiting to nginx
 - [ ] Update admin password after first login
 
 ---
