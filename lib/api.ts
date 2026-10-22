@@ -1,30 +1,20 @@
 import axios from 'axios';
 
-// Dynamically resolve API URL so it works seamlessly on:
-// 1. Unified port 80 / domain / reverse proxy (uses relative '/api')
-// 2. Direct server IP on port 3000 (uses 'http://<SERVER_IP>:5000/api')
-// 3. Localhost development (uses 'http://localhost:5000/api')
+// Dynamically resolve API URL using relative '/api', which works seamlessly:
+// - Behind Nginx (port 80 / 443 / domain / server IP)
+// - Directly on Next.js (port 3000 via next.config.mjs rewrites)
+// - Local development
 export const getBaseUrl = (): string => {
   if (typeof window !== 'undefined') {
-    const { hostname, port, protocol } = window.location;
-    // When accessed through standard HTTP/HTTPS ports (e.g. via Nginx reverse proxy on port 80 or 443)
-    if (!port || port === '80' || port === '443') {
-      return '/api';
-    }
-    // When accessed directly on Next.js port (e.g. 3000), talk to the backend on the SAME server/host on port 5000
-    if (port === '3000') {
-      return `${protocol}//${hostname}:5000/api`;
-    }
-    // Fallback for any other custom port behind a proxy
     return '/api';
   }
 
-  // Server-side default
+  // Server-side rendering default
   const envUrl = process.env.NEXT_PUBLIC_API_URL;
   if (envUrl && !envUrl.includes('localhost:5000')) {
     return envUrl;
   }
-  return 'http://localhost:5000/api';
+  return '/api';
 };
 
 // Create a centralized Axios instance
