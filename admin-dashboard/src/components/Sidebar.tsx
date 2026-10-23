@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/sidebar.css';
 
@@ -14,9 +14,13 @@ const navItems = [
   { to: '/settings', label: 'Settings', icon: '⚙️', section: 'System' },
 ];
 
-export default function Sidebar() {
+interface SidebarProps {
+  collapsed: boolean;
+  onToggle: () => void;
+}
+
+export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
   const { logout } = useAuth();
-  const location = useLocation();
 
   const sections = navItems.reduce<Record<string, typeof navItems>>((acc, item) => {
     if (!acc[item.section]) acc[item.section] = [];
@@ -25,19 +29,52 @@ export default function Sidebar() {
   }, {});
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
-        <div className="sidebar-logo">E</div>
-        <div className="sidebar-brand">
-          <span className="sidebar-brand-name">ETEX Admin</span>
-          <span className="sidebar-brand-sub">Management</span>
+        <div className="sidebar-brand-group">
+          <div className="sidebar-logo" title="Quiz Admin">Q</div>
+          {!collapsed && (
+            <div className="sidebar-brand">
+              <span className="sidebar-brand-name">Quiz Admin</span>
+              <span className="sidebar-brand-sub">Management</span>
+            </div>
+          )}
         </div>
+        <button
+          type="button"
+          className="sidebar-toggle-btn"
+          onClick={onToggle}
+          title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="toggle-icon"
+          >
+            {collapsed ? (
+              <polyline points="9 18 15 12 9 6" />
+            ) : (
+              <polyline points="15 18 9 12 15 6" />
+            )}
+          </svg>
+        </button>
       </div>
 
       <nav className="sidebar-nav">
         {Object.entries(sections).map(([section, items]) => (
-          <div key={section}>
-            <div className="sidebar-section-label">{section}</div>
+          <div key={section} className="sidebar-section-group">
+            {!collapsed ? (
+              <div className="sidebar-section-label">{section}</div>
+            ) : (
+              <div className="sidebar-section-divider" title={section} />
+            )}
             {items.map((item) => (
               <NavLink
                 key={item.to}
@@ -46,9 +83,10 @@ export default function Sidebar() {
                 className={({ isActive }) =>
                   `sidebar-link ${isActive ? 'active' : ''}`
                 }
+                title={collapsed ? item.label : undefined}
               >
                 <span className="nav-icon">{item.icon}</span>
-                <span>{item.label}</span>
+                {!collapsed && <span className="sidebar-link-text">{item.label}</span>}
               </NavLink>
             ))}
           </div>
@@ -62,14 +100,19 @@ export default function Sidebar() {
           rel="noopener noreferrer"
           className="sidebar-link"
           style={{ textDecoration: 'none' }}
-          title="Open Standalone Statistics Dashboard"
+          title={collapsed ? 'Statistics Page' : 'Open Standalone Statistics Dashboard'}
         >
           <span className="nav-icon">📈</span>
-          <span>Statistics Page</span>
+          {!collapsed && <span className="sidebar-link-text">Statistics Page</span>}
         </a>
-        <button className="sidebar-link" onClick={logout}>
+        <button
+          type="button"
+          className="sidebar-link logout-btn"
+          onClick={logout}
+          title={collapsed ? 'Logout' : undefined}
+        >
           <span className="nav-icon">🚪</span>
-          <span>Logout</span>
+          {!collapsed && <span className="sidebar-link-text">Logout</span>}
         </button>
       </div>
     </aside>

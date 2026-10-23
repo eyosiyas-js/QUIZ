@@ -200,6 +200,27 @@
   gap: 12px;
 }
 
+.header-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.header-toggle-btn:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
 .header-breadcrumb {
   font-size: 0.85rem;
   color: var(--text-muted);
@@ -282,7 +303,7 @@
   }
   .sidebar .sidebar-brand,
   .sidebar .sidebar-section-label,
-  .sidebar .sidebar-link span {
+  .sidebar .sidebar-link-text {
     display: none;
   }
   .main-content {

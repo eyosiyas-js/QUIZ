@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className="login-page">
       <div className="login-card">
-        <div className="login-logo">E</div>
+        <div className="login-logo">Q</div>
         <h1 className="login-title">Admin Login</h1>
         <p className="login-subtitle">Sign in to the management dashboard</p>
 

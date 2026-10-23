@@ -1,4 +1,4 @@
-# ETEX Game — Docker Deployment Guide
+# Quiz Game — Docker Deployment Guide
 
 ## Architecture
 

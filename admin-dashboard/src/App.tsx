@@ -12,20 +12,32 @@ import LotteryWinners from './pages/LotteryWinners';
 import Feedback from './pages/Feedback';
 import Settings from './pages/Settings';
 import FrontendCustomization from './pages/FrontendCustomization';
+import { useState } from 'react';
 import Loader from './components/Loader';
 import './styles/dashboard.css';
 
 function ProtectedLayout() {
   const { isAuthenticated, isLoading } = useAuth();
+  const [collapsed, setCollapsed] = useState(() => {
+    return localStorage.getItem('admin_sidebar_collapsed') === 'true';
+  });
+
+  const toggleSidebar = () => {
+    setCollapsed((prev) => {
+      const next = !prev;
+      localStorage.setItem('admin_sidebar_collapsed', String(next));
+      return next;
+    });
+  };
 
   if (isLoading) return <Loader />;
   if (!isAuthenticated) return <Navigate to="/login" replace />;
 
   return (
-    <div className="app-layout">
-      <Sidebar />
-      <div className="main-content">
-        <Header />
+    <div className={`app-layout ${collapsed ? 'sidebar-is-collapsed' : ''}`}>
+      <Sidebar collapsed={collapsed} onToggle={toggleSidebar} />
+      <div className={`main-content ${collapsed ? 'collapsed' : ''}`}>
+        <Header collapsed={collapsed} onToggleSidebar={toggleSidebar} />
         <Outlet />
       </div>
     </div>

@@ -1,6 +1,6 @@
 #!/bin/bash
 # ============================================================
-# ETEX Game — Automated SSL Certificate Setup
+# Quiz Game — Automated SSL Certificate Setup
 # ============================================================
 set -e
 

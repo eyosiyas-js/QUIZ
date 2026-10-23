@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ETEX Quiz Game - Statistics Exporter
+Quiz Game - Statistics Exporter
 ===================================
 Fetches participation data, quiz results, question accuracy, and lottery eligibility
 from PostgreSQL and exports it into a structured JSON file for the standalone
@@ -28,7 +28,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Export ETEX quiz statistics from PostgreSQL to JSON")
+    parser = argparse.ArgumentParser(description="Export Quiz statistics from PostgreSQL to JSON")
     parser.add_argument(
         "--db-url",
         default=os.environ.get("DATABASE_URL"),
@@ -218,7 +218,7 @@ def generate_sample_data():
 
     return {
         "meta": {
-            "title": "ETEX Quiz Game Participation & Performance Report",
+            "title": "Quiz Game Participation & Performance Report",
             "exportedAt": now.isoformat(),
             "exportedAtFormatted": now.strftime("%b %d, %Y - %I:%M %p UTC"),
             "source": "Sample / Preloaded Data (Run export_statistics.py with DB connection to refresh live)",
@@ -469,7 +469,7 @@ def fetch_from_database(args):
     now = datetime.now(timezone.utc)
     return {
         "meta": {
-            "title": "ETEX Quiz Game Participation & Performance Report",
+            "title": "Quiz Game Participation & Performance Report",
             "exportedAt": now.isoformat(),
             "exportedAtFormatted": now.strftime("%b %d, %Y - %I:%M %p UTC"),
             "source": "PostgreSQL Database (Live Export)",
@@ -512,7 +512,7 @@ def main():
     args = parse_args()
     
     print("\n=======================================================")
-    print("      ETEX Quiz Game - Statistics Exporter")
+    print("      Quiz Game - Statistics Exporter")
     print("=======================================================\n")
 
     if args.demo:
